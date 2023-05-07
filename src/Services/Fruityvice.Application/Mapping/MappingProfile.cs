@@ -9,5 +9,7 @@ public class MappingProfile : Profile
     {
         CreateMap<Nutrition, NutritionDto>().ReverseMap();
         CreateMap<Fruit, FruitDto>().ReverseMap();
+        CreateMap<BasicFruit, FruitDto>().ReverseMap();
+        CreateMap<BasicFruit, Fruit>().ReverseMap();
     }
 }

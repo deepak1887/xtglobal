@@ -26,9 +26,9 @@ public class FruitsMockData
         };
     }
 
-    public static FruitDto NewFruit()
+    public static BasicFruit NewFruit()
     {
-        return new FruitDto()
+        return new BasicFruit()
         {
             Name = "StrawberryW",
             Family = "Rosaceae",

@@ -14,9 +14,6 @@ public class RepositoryBase<T> : IRepositoryBase<T> where T : EntityBase
 
     public async Task<T> AddAsync(T entity)
     {
-        var max = await dbContext.Set<T>().ToListAsync(); // this can be optimized
-        var maxId = max.Max(x => x.Id);
-        entity.Id = ++maxId;
         dbContext.Set<T>().Add(entity);
         await dbContext.SaveChangesAsync();
         return entity;
